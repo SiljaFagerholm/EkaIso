@@ -3,11 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="Junaulkoasu.css" rel="stylesheet" />
+<script src="Scripts/jquery-3.3.1.js"></script>
 </head>
 <body>
-    <input type="text" name="Lähtöaika" value="Lähtöaika" />
-    <input type="text" name="saapumisaika" value="saapumisaika" />
-    <input type="button" value="ahaa"/>
+    <input id="lAika" type="text" name="Lähtöaika" value="Lähtöaika" />
+    <input id="sAika" type="text" name="saapumisaika" value="saapumisaika" /> <br />
+    <!--<input id="lPaikka" type="text" name="lähtöpaikka" value="Lähtöpaikka" />-->
+    <label>
+        Anna lähtöpaikka
+        <!--<input list="kaupunkivalikko" name="kaupungit" />-->
+    </label>
+    <select id="kaupunkivalikko1">
+        <option id="blank" value="null"></option>
+        <option id="HKI" value="HKI">Helsinki</option>
+        <option id="LH" value="LH">Lahti</option>
+        <option id="TPE" value="TPE">Tampere</option>
+    </select>
 
+    <br />
+    <br />
+    <label>
+        Anna saapumispaikka
+        <!--<input list="kaupunkivalikko" name="kaupungit" />-->
+    </label>
+    <select id="kaupunkivalikko2">
+        <option id="blank" value="null"></option>
+        <option id="HKI" value="HKI">Helsinki</option>
+        <option id="LH" value="LH">Lahti</option>
+        <option id="TPE" value="TPE">Tampere</option>
+    </select>
+    <br />
+
+    <!-- <input id="sPaikka" type="text" name="saapumispaikka" value="Saapumispaikka" />-->
+    <input onclick="haedata()" id="haku" type="button" value="ahaa" />
+    <ul id="tulostus"></ul>
+    <script src="junaToim.js"></script>
 </body>
 </html>
