@@ -14,12 +14,11 @@
         Anna lähtöpaikka
         <!--<input list="kaupunkivalikko" name="kaupungit" />-->
     </label>
-    <select id="kaupunkivalikko1">
-        <option id="blank" value="null"></option>
+    <input list="kaupunkivalikko1" id="kv1" />
+    <datalist id="kaupunkivalikko1">
         <option id="HKI" value="HKI">Helsinki</option>
-        <option id="LH" value="LH">Lahti</option>
         <option id="TPE" value="TPE">Tampere</option>
-    </select>
+    </datalist>
 
     <br />
     <br />
@@ -27,17 +26,19 @@
         Anna saapumispaikka
         <!--<input list="kaupunkivalikko" name="kaupungit" />-->
     </label>
-    <select id="kaupunkivalikko2">
-        <option id="blank" value="null"></option>
+    <input list="kaupunkivalikko2" id="kv2" />
+    <datalist id="kaupunkivalikko2">
         <option id="HKI" value="HKI">Helsinki</option>
-        <option id="LH" value="LH">Lahti</option>
         <option id="TPE" value="TPE">Tampere</option>
-    </select>
+    </datalist>
+
     <br />
 
     <!-- <input id="sPaikka" type="text" name="saapumispaikka" value="Saapumispaikka" />-->
-    <input onclick="haedata()" id="haku" type="button" value="ahaa" />
+    <input onclick="haedata()" id="haku" type="button" value="hae" />
     <ul id="tulostus"></ul>
     <script src="junaToim.js"></script>
+    <script src="Tuomasjs.js"></script>
+    <link href="Junaulkoasu.css" rel="stylesheet" />
 </body>
 </html>

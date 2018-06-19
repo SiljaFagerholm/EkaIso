@@ -39,9 +39,9 @@ xhr.onreadystatechange = function () {
             for (var i = 0; i < tulos.length; ++i) {
                 var elem = document.createElement("li");
                 var juna = tulos[i];
-                var lahtoaika = new Date(juna.timeTableRows[0].scheduledTime).toLocaleTimeString("fi", { hour: '2-digit', minute: '2-digit', hour12: false });
+                var lahtoaika = new Date(juna.timeTableRows[0].scheduledTime).toLocaleTimeString("fi", { optiot });
                 //var saapumisaika = new Date(juna.timeTableRows[juna.timeTableRows.length-1].scheduledTime).toLocaleTimeString("fi", {hour: '2-digit', minute:'2-digit', hour12: false});
-                var saapumisaika = new Date(getSaapumisaika(juna.timeTableRows, $("#kaupunkivalikko2").val())).toLocaleTimeString("fi", optiot);
+                var saapumisaika = new Date(getSaapumisaika(juna.timeTableRows, $("#kv2").val())).toLocaleTimeString("fi", optiot);
                 elem.appendChild(document.createTextNode(juna.trainCategory + ": " + juna.trainType + juna.trainNumber + ", lähtee: " + lahtoaika + " saapuu: " + saapumisaika));
                 lista.appendChild(elem);
             }
@@ -58,11 +58,14 @@ xhr.onreadystatechange = function () {
 var lista = document.getElementById("tulostus");
 function haedata() {
     
-    lPaikka = $("#kaupunkivalikko1").val();
+   // lPaikka = $("#kaupunkivalikko1").val();
+    lPaikka = $("#kv1").val();
     lPaikka = "/" + lPaikka;
-    sPaikka = $("#kaupunkivalikko2").val();
+   // sPaikka = $("#kaupunkivalikko2").val();
+    sPaikka = $("#kv2").val();
     sPaikka = "/" + sPaikka;
-    console.log(lPaikka);
+    console.log("lp"+lPaikka);
+    console.log("sp"+sPaikka);
     xhr.open('get', baseurl + lPaikka + sPaikka);
     xhr.send();
 }
