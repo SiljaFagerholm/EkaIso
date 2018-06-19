@@ -7,9 +7,19 @@
 <script src="Scripts/jquery-3.3.1.js"></script>
 </head>
 <body>
-    <input id="lAika" type="text" name="Lähtöaika" value="Lähtöaika" />
-    <input id="sAika" type="text" name="saapumisaika" value="saapumisaika" /> <br />
+    <!--Vanhat valikot lähtö- ja saapumisajoille-->
+    <!--<input id="lAika" type="text" name="Lähtöaika" value="Lähtöaika" />
+    <input id="sAika" type="text" name="saapumisaika" value="saapumisaika" />-->
     <!--<input id="lPaikka" type="text" name="lähtöpaikka" value="Lähtöpaikka" />-->
+    <br />
+    <label>Anna lähtöaika</label>
+    <input id="lAika" type="date" name="Lähtöaika" value="Lähtöaika" />
+    <input id="time1" type="time" />
+    <br />
+    <label>Anna saapumisaika</label>
+    <input id="sAika" type="date" name="Saapumisaika" value="Saapumisaika" />
+    <input id="time2" type="time" />
+    <br />
     <label>
         Anna lähtöpaikka
         <!--<input list="kaupunkivalikko" name="kaupungit" />-->
@@ -19,6 +29,7 @@
         <option id="HKI" value="HKI">Helsinki</option>
         <option id="LH" value="LH">Lahti</option>
         <option id="TPE" value="TPE">Tampere</option>
+
     </select>
 
     <br />
@@ -36,8 +47,9 @@
     <br />
 
     <!-- <input id="sPaikka" type="text" name="saapumispaikka" value="Saapumispaikka" />-->
-    <input onclick="haedata()" id="haku" type="button" value="ahaa" />
+    <input onclick="haedata()" id="haku" type="button" value="Hae" />
     <ul id="tulostus"></ul>
     <script src="junaToim.js"></script>
+    <script src="aikavalikko.js"></script>
 </body>
 </html>
