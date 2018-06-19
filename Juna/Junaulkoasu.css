@@ -1,5 +1,91 @@
 ﻿body {
+    font-family: 'Palatino Linotype', sans-serif;
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
 }
+<<<<<<< HEAD
+#div1 {
+
+    /*display: inline;*/
+    max-width: 30%;
+    min-width: 15%;
+    min-height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    top: 10px;
+
+    background-color: rgba(143, 145, 146, 0.69);
+    border: 0.3px solid white;
+    display: block;
+    border-radius: 10px;
+    float: initial;
+    padding: 10px;
+    
+}
+#lPaikka {
+    margin-left: 18%;
+
+    width: 30%;
+    min-height: 30px;
+    float: initial;
+}
+#sPaikka {
+  
+    width: 30%;
+    min-height: 30px;
+    float: initial;
+}
+#pvm {
+    margin-left: 18%;
+    width: 30%;
+    min-height: 30px;
+    float: initial;
+}
+
+#klo {
+    width: 19%;
+    min-height: 30px;
+    float: initial;
+}
+#tulosta {
+
+    width: 10%;
+    min-height: 30px;
+    float: initial;
+}
+
+h1 {
+    display: inline;
+    margin-left: 5%;
+    position: static;
+    float: initial;
+    top: 200px;
+    font-size: 70px;
+    color:#e0d9d9;
+    width: 25%;
+}
+#hae {
+    margin-left: 18%;
+    position: static;
+    top: 50px;
+    font-size: 30px;
+}
+#div2 {
+    min-height: 300px;
+    margin-left: 5%;
+    margin-top: 160px;
+    background-color: rgba(143, 145, 146, 0.69);
+    padding: 10px;
+    border: 0.1px solid white;
+    display: none;
+    border-radius: 10px;
+    float: initial;
+    font-size: 20px;
+=======
 
 .dropbtn {
     background-color: #3498DB;
@@ -42,4 +128,5 @@
 
 .show {
     display: block;
+>>>>>>> 48ad12e5afd40d1875484974e078d8de9d8ed203
 }

@@ -24,6 +24,8 @@
 var baseurl = "https://rata.digitraffic.fi/api/v1/live-trains/station";
 var lPaikka;
 var sPaikka;
+var pvm;
+//var klo;
 var optiot = { hour: '2-digit', minute: '2-digit', hour12: false };
 //  /live-trains/station/<departure_station_code>/<arrival_station_code>?departure_date=<departure_date>&from=<from>&to=<to>&limit=<limit>
 
@@ -39,14 +41,19 @@ xhr.onreadystatechange = function () {
             for (var i = 0; i < tulos.length; ++i) {
                 var elem = document.createElement("li");
                 var juna = tulos[i];
+<<<<<<< HEAD
                 var lahtoaika = new Date(juna.timeTableRows[0].scheduledTime).toLocaleTimeString("fi", { optiot });
+=======
+               
+                var lahtoaika = new Date(juna.timeTableRows[0].scheduledTime).toLocaleTimeString("fi", { hour: '2-digit', minute: '2-digit', hour12: false });
+>>>>>>> 30ef1690c723a3c98845332edc8496825c4f2130
                 //var saapumisaika = new Date(juna.timeTableRows[juna.timeTableRows.length-1].scheduledTime).toLocaleTimeString("fi", {hour: '2-digit', minute:'2-digit', hour12: false});
                 var saapumisaika = new Date(getSaapumisaika(juna.timeTableRows, $("#kv2").val())).toLocaleTimeString("fi", optiot);
                 elem.appendChild(document.createTextNode(juna.trainCategory + ": " + juna.trainType + juna.trainNumber + ", lähtee: " + lahtoaika + " saapuu: " + saapumisaika));
                 lista.appendChild(elem);
             }
             //document.getElementById("hae").innerText = "Hae data uudestaan painamalla nappulaa:";
-            document.getElementById("haku")
+            document.getElementById("haku");
         } else {
             alert("Pyyntö epäonnistui");
             //document.getElementById("hae").innerText = "Hae data uudestaan painamalla nappulaa:";
@@ -64,9 +71,19 @@ function haedata() {
    // sPaikka = $("#kaupunkivalikko2").val();
     sPaikka = $("#kv2").val();
     sPaikka = "/" + sPaikka;
+<<<<<<< HEAD
     console.log("lp"+lPaikka);
     console.log("sp"+sPaikka);
     xhr.open('get', baseurl + lPaikka + sPaikka);
+=======
+    pvm = $("#lAika").val();
+    pvm = "?departure_date=" + pvm;
+    //klo = $("#time1").val();
+    //klo = "T" + klo + ":00.000Z";
+    console.log(lPaikka);
+    console.log(baseurl + lPaikka + sPaikka + pvm);
+    xhr.open('get', baseurl + lPaikka + sPaikka + pvm);
+>>>>>>> 30ef1690c723a3c98845332edc8496825c4f2130
     xhr.send();
 }
 haedata();
