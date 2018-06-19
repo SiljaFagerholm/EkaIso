@@ -76,7 +76,7 @@ function haedata() {
     xhr.open('get', baseurl + lPaikka + sPaikka + pvm);
     xhr.send();
 }
-haedata();
+
 function getSaapumisaika(timetablerows, asema) {
     //var sr=timetablerows.find(function (tr) {
     //    return tr.stationShortCode == asema;
