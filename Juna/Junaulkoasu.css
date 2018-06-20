@@ -6,55 +6,85 @@
     background-attachment: fixed;
     background-position: top;
 }
+#btn1 {
+    margin-left: 5px;
+  
+    float: right;
+    height: 35px;
+}
+#login {
+    
+    float: right;
+    height: 29px;
+}
+#login1 {
+    margin-left: 5px;
+    float: right;
+    height: 29px;
+}
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 30px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.26);
+    width: 98%;
+    border-radius: 3px;
+    border: 0.5px dotted rgba(255, 255, 255, 0.30)
+}
+
 #div1 {
 
     /*display: inline;*/
-    max-width: 30%;
+    max-width: 60%;
     min-width: 15%;
-    min-height: 230px;
+    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     position: static;
     top: 10px;
-
-    background-color: rgba(143, 145, 146, 0.69);
+    background-color: rgba(210, 210, 210, 0.9);
     border: 0.3px solid white;
     display: block;
-    border-radius: 10px;
+    border-radius: 3px;
     float: initial;
     padding: 10px;
     
 }
-#lPaikka {
-    margin-left: 18%;
-
-    width: 30%;
+#kv1, #kv2 {
+    text-align: center;
+    margin-right: 100px;
+    width: 37%;
     min-height: 30px;
-    float: initial;
+    float: right;
+    border-radius: 3px;
 }
-#sPaikka {
+
+#lAika {
+    margin-right: 100px;
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Times New Roman';
+    width: 37%;
+    min-height: 30px;
+    float: right;
+    border-radius: 3px;
+}
+#sAika, #time2 {
+    
+    visibility: hidden;
+ 
+}
+
+#tulostus {
   
-    width: 30%;
-    min-height: 30px;
-    float: initial;
-}
-#pvm {
-    margin-left: 18%;
-    width: 30%;
-    min-height: 30px;
-    float: initial;
-}
-
-#klo {
-    width: 19%;
-    min-height: 30px;
-    float: initial;
-}
-#tulosta {
-
-    width: 10%;
-    min-height: 30px;
-    float: initial;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 30px;
+    font-weight: lighter;  
+    list-style-type: none;
 }
 
 h1 {
@@ -67,21 +97,26 @@ h1 {
     color:#e0d9d9;
     width: 25%;
 }
-#hae {
-    margin-left: 18%;
-    position: static;
-    top: 50px;
+#haku {
+    background-image: url("2.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 100px;
+    background-color: rgb(111, 111, 111);
+    height: 100px;
+    border-radius: 100px;
+    float: right;
+    border: 1px dashed rgba(255, 255, 255, 0.12)
+}
+
+label {
+    margin-left: 100px;
     font-size: 30px;
+    float: left;
+    text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.50);
 }
-#div2 {
-    min-height: 300px;
-    margin-left: 5%;
-    margin-top: 160px;
-    background-color: rgba(143, 145, 146, 0.69);
-    padding: 10px;
-    border: 0.1px solid white;
-    display: none;
-    border-radius: 10px;
-    float: initial;
-    font-size: 20px;
+span {
+    text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.50);
+    font-weight: bold;
 }
+

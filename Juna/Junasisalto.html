@@ -7,47 +7,66 @@
 <script src="Scripts/jquery-3.3.1.js"></script>
 </head>
 <body>
+    <div id="div1">
+        <nav>
 
-    <link href="Junaulkoasu.css" rel="stylesheet" />
-    <!--Vanhat valikot lähtö- ja saapumisajoille-->
-    <!--<input id="lAika" type="text" name="Lähtöaika" value="Lähtöaika" />
+            <div>
+                <span>SUPERAIKATAULUHAKU</span> 
+                <input id="btn1" type="submit" name="name" value="Login" />
+                <input id="login1" type="text" name="name" placeholder="Password" />
+                <input id="login" type="text" name="name" placeholder="Username" />
+            </div>
+        </nav>
+        <br /><br />
+
+        <!--Vanhat valikot lähtö- ja saapumisajoille-->
+        <!--<input id="lAika" type="text" name="Lähtöaika" value="Lähtöaika" />
     <input id="sAika" type="text" name="saapumisaika" value="saapumisaika" />-->
-    <!--<input id="lPaikka" type="text" name="lähtöpaikka" value="Lähtöpaikka" />-->
-    <br />
-    <label>Anna lähtöaika</label>
-    <input id="lAika" type="date" name="Lähtöaika" value="Lähtöaika" />
-    <input id="time1" type="time" />
-    <br />
-    <label>Anna saapumisaika</label>
-    <input id="sAika" type="date" name="Saapumisaika" value="Saapumisaika" />
-    <input id="time2" type="time" />
-    <br />
-    <label>
-        Anna lähtöpaikka
-        <!--<input list="kaupunkivalikko" name="kaupungit" />-->
-    </label>
-    <input list="kaupunkivalikko1" id="kv1" />
-    <datalist id="kaupunkivalikko1">
-        <option id="HKI" value="HKI">Helsinki</option>
-        <option id="TPE" value="TPE">Tampere</option>
-    </datalist>
-    <br />
-    <br />
-    <label>
-        Anna saapumispaikka
-        <!--<input list="kaupunkivalikko" name="kaupungit" />-->
-    </label>
-    <input list="kaupunkivalikko2" id="kv2" />
-    <datalist id="kaupunkivalikko2">
-        <option id="HKI" value="HKI">Helsinki</option>
-        <option id="TPE" value="TPE">Tampere</option>
-    </datalist>
+        <!--<input id="lPaikka" type="text" name="lähtöpaikka" value="Lähtöpaikka" />-->
 
-    <br />
 
-    <!-- <input id="sPaikka" type="text" name="saapumispaikka" value="Saapumispaikka" />-->
-    <input onclick="haedata()" id="haku" type="button" value="hae" />
-    <ul id="tulostus"></ul>
+
+        <br />
+        <label>Lähtöaika</label>
+        <input id="lAika" type="datetime-local" name="Lähtöaika" value="Lähtöaika">
+
+        <br />
+        <!--<label>Anna saapumisaika</label>-->
+
+
+        <br />
+        <label>
+            Lähtöpaikka
+            <!--<input list="kaupunkivalikko" name="kaupungit" />-->
+        </label>
+        <input list="kaupunkivalikko1" id="kv1" />
+        <datalist id="kaupunkivalikko1">
+            <option value="HKI">Helsinki</option>
+            <option id="TPE" value="TPE">Tampere</option>
+        </datalist>
+        <br />
+        <br />
+        <label>
+            Saapumispaikka
+            <!--<input list="kaupunkivalikko" name="kaupungit" />-->
+        </label>
+        <input list="kaupunkivalikko2" id="kv2" />
+        <datalist id="kaupunkivalikko2">
+            <option id="HKI" value="HKI">Helsinki</option>
+            <option id="TPE" value="TPE">Tampere</option>
+        </datalist>
+
+
+        <br /><br />
+
+        <input onclick="haedata()" id="haku" type="button" value="                         " />
+        <ul id="tulostus"></ul>  <input id="sAika" type="datetime-local" name="Saapumisaika" value="Saapumisaika" />
+        <!-- <input id="sPaikka" type="text" name="saapumispaikka" value="Saapumispaikka" />-->
+        <!--<input type="button" name="Seuraavat" value="Seuraavat" id="btn2" />-->
+
+    </div>
+
+
     <script src="junaToim.js"></script>
     <script src="Tuomasjs.js"></script>
     <link href="Junaulkoasu.css" rel="stylesheet" />
